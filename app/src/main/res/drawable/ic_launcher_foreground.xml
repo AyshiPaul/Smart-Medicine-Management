@@ -1,0 +1,52 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Purple Heart Background -->
+    <path
+        android:fillColor="#7C3AED"
+        android:pathData="M50,88 C20,68 12,48 12,34 C12,20 23,10 36.5,10 C44,10 48,14 50,18 C52,14 56,10 63.5,10 C77,10 88,20 88,34 C88,48 80,68 50,88 Z" />
+
+    <!-- Angled Clear Capsule Pill inside Group -->
+    <group
+        android:pivotX="45"
+        android:pivotY="42"
+        android:rotation="-45">
+
+        <!-- Top Half of Capsule (White) -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M33,41 L33,35 C33,28.37 38.37,23 45,23 C51.63,23 57,28.37 57,35 L57,41 Z" />
+
+        <!-- Bottom Half of Capsule (White) -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M33,44 L33,50 C33,56.63 38.37,62 45,62 C51.63,62 57,56.63 57,50 L57,44 Z" />
+
+        <!-- Capsule Middle Divider Line (Purple) -->
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M31,42.5 L59,42.5"
+            android:strokeColor="#7C3AED"
+            android:strokeWidth="2.5" />
+    </group>
+
+    <!-- Small Clock / Reminder Badge -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M63,58m-8,0a8,8 0 1,1 16,0a8,8 0 1,1 -16,0"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2" />
+
+    <!-- Clock Hands (White) -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M63,53.5 L63,58 L66,60"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+</vector>

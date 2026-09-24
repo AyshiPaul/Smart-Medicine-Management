@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.smartmedicineapp">
+
+    <!-- 🌐 ইন্টারনেট ও নেটওয়ার্ক অ্যাক্সেস পারমিশন -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- ⏰ অ্যালার্ম ও নোটিফিকেশন পারমিশন (Phase 5) -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- 📍 লোকেশন পারমিশন (Phase 5 & 6) -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SmartMedicineApp"
+        android:usesCleartextTraffic="true">
+
+        <!-- 🚀 ১. SplashActivity -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 🔑 ২. LoginActivity -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+        <!-- 📝 ৩. RegisterActivity -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
+        <!-- 🏠 ৪. MainActivity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <!-- 💊 ৫. AddMedicineActivity -->
+        <activity
+            android:name=".AddMedicineActivity"
+            android:exported="false" />
+
+        <!-- ✏️ ৬. EditMedicineActivity -->
+        <activity
+            android:name=".EditMedicineActivity"
+            android:exported="false" />
+
+        <!-- ⏰ ৭. ReminderActivity (Phase 5) -->
+        <activity
+            android:name=".ReminderActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 📊 ৮. DailyProgressActivity (Phase 5) -->
+        <activity
+            android:name=".DailyProgressActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 🏥 ৯. PharmacyActivity (Phase 6) -->
+        <activity
+            android:name=".PharmacyActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 📈 ১০. WeeklyReportActivity (Phase 6) -->
+        <activity
+            android:name=".WeeklyReportActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- ⚙️ ১১. SettingsActivity (Phase 6) -->
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 🔔 ১২. Alarm Receiver (Phase 5 Notification Receiver) -->
+        <receiver
+            android:name=".AlarmReceiver"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+
+</manifest>
